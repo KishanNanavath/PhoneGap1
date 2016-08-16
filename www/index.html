@@ -69,8 +69,21 @@
 
         <h6 id="deviceDetails"></h6>
 
+        <script type="text/javascript">
+            document.addEventListener("deviceready",onDeviceReady,false);
+
+            function onDeviceReady(){
+                alert("Device is Ready");
+                document.addEventListener("pause",onPause,false);
+            }
+
+            function onPause(){
+//                alert("Device is in background");
+            }
+        </script>
+
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
